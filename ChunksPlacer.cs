@@ -28,7 +28,7 @@ public class ChunksPlacer : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetFloat("Distance", FinalDistance); // сохраняем для GameManagera для обработки индикатора
+        PlayerPrefs.SetFloat("Distance", FinalDistance); 
         player = CarController.player;
         spawnedChunks.Add(ZeroChunk);
         Chunk newChunk = Instantiate(ZeroChunk);
@@ -44,13 +44,13 @@ public class ChunksPlacer : MonoBehaviour
         }
     }
 
-    private IEnumerator CheckDistanceIE() // бесконечная корутина с циклом 0,5 сек.
+    private IEnumerator CheckDistanceIE() 
     {
         if (player.position.z > spawnedChunks[spawnedChunks.Count - 1].End.position.z - 240)
         {
             SpawnChunk();
         }
-        if (player.position.z >= FinalDistance) //TODO: переделать через событие
+        if (player.position.z >= FinalDistance) 
         {
             SpawnMode = false;
             SpawnChunk();
