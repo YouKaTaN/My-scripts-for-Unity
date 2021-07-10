@@ -7,6 +7,7 @@ The WaterFlow.cs script allows you to adjust the buoyancy force, the force of th
 The script Inventory.cs is designed to organize inventory with the ability to increase the maximum number of slots for items.
 
 The Chunk.cs and ChunkPlacer.cs scripts are designed to randomly generate level plots as the player approaches the last piece of EndPoint. The likelihood of individual areas appearing is configured using AnimationCurve. Checking the distance traveled is not carried out in the update function, but with the help of a coroutine every 0.5 seconds.
+There is an implementation of removing already passed sections and moving the stub (dead end) to the last section.
  
 You can download the game "Forest Revenge" from the link: https://play.google.com/store/apps/details?id=com.TappaniaGames.ForestRevenge
 And also support us on the portals:
