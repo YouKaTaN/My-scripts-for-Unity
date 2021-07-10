@@ -16,16 +16,6 @@ public class ChunksPlacer : MonoBehaviour
     private bool SpawnMode = true;
     private List<Chunk> spawnedChunks = new List<Chunk>();
 
-    private void OnEnable()
-    {
-        CheckPointFinal.OnFinish += FinalClean;
-    }
-
-    private void OnDisable()
-    {
-        CheckPointFinal.OnFinish -= FinalClean;
-    }
-
     private void Start()
     {
         PlayerPrefs.SetFloat("Distance", FinalDistance); 
